@@ -1,0 +1,1 @@
+export default function Home() { return ( <main style={{ fontFamily: "system-ui, sans-serif", padding: 24, lineHeight: 1.4 }}> CallReady A safe place to practice real phone calls before they matter. This is the web app foundation for accounts and billing.  ); }
