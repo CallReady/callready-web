@@ -8,11 +8,7 @@ export default function Home() {
       <div className="container">
         <div className="nav">
           <div className="brand">
-            <img
-              className="logoImg"
-              src="/logo1.png"
-              alt="CallReady logo"
-            />
+            <img className="logoImg" src="/logo1.png" alt="CallReady logo" />
             <div className="brandName">CallReady</div>
           </div>
 
@@ -52,30 +48,4 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="miniNote">
-              Built for parents, teachers, and phone reluctant teens. Calm, guided, and respectful.
-            </div>
-          </div>
-
-          <div className="heroRight" aria-label="Highlights">
-            <div className="tile">
-              <p className="tileTitle">Practice, not performance</p>
-              <p className="tileText">A supportive space for repetition and preparation, at your own pace.</p>
-            </div>
-            <div className="tile">
-              <p className="tileTitle">Guided scenarios</p>
-              <p className="tileText">Practice common calls like appointments, questions, and follow-ups with gentle structure.</p>
-            </div>
-            <div className="tile">
-              <p className="tileTitle">Confidence grows</p>
-              <p className="tileText">Small wins add up. The goal is steady progress, not perfection.</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="section" id="how">
-          <div className="sectionTitle">How it works</div>
-
-          <div className="grid3">
-            <div className="feature">
-              <div className="badge">
+            <div className="mini
