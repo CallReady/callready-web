@@ -400,7 +400,7 @@ export default function Home() {
           border: 1px solid rgba(47, 58, 64, 0.18);
           text-decoration: none;
           color: var(--text);
-          background: #fff;
+          background: #000;
           font-weight: 700;
           font-size: 14px;
           cursor: pointer;
