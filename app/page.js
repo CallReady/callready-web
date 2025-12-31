@@ -8,8 +8,17 @@ export default function Home() {
       <div className="container">
         <div className="nav">
           <div className="brand">
-            <div className="logoMark" aria-hidden="true"></div>
-            <div className="brandName">CallReady</div>
+            <img
+              src="/logo1.png"
+              alt="CallReady logo"
+              style={{ height: 40, width: "auto", display: "block" }}
+            />
+            <div className="brandName">
+              CallReady
+              <div style={{ fontSize: 12, fontWeight: 500, opacity: 0.85, marginTop: 2 }}>
+                Helping teens build phone confidence
+              </div>
+            </div>
           </div>
 
           <div className="navLinks">
@@ -106,7 +115,7 @@ export default function Home() {
               <p className="tileText">Same supportive structure each time, so teens know what to expect.</p>
             </div>
             <div className="feature">
-              <div className="badge">C</div>
+         I    <div className="badge">C</div>
               <p className="tileTitle">It is low pressure</p>
               <p className="tileText">No judgment. No scoring. Just guided practice and encouragement.</p>
             </div>
@@ -163,4 +172,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
+}I
