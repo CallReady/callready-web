@@ -1,3 +1,5 @@
+"use client";
+
 const PHONE_E164 = "+18559761695";
 const PHONE_DISPLAY = "(855) 976-1695";
 const TEL_LINK = `tel:${PHONE_E164}`;
