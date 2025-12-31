@@ -115,7 +115,7 @@ export default function Home() {
               <p className="tileText">Same supportive structure each time, so teens know what to expect.</p>
             </div>
             <div className="feature">
-         I    <div className="badge">C</div>
+              <div className="badge">C</div>
               <p className="tileTitle">It is low pressure</p>
               <p className="tileText">No judgment. No scoring. Just guided practice and encouragement.</p>
             </div>
@@ -172,4 +172,4 @@ export default function Home() {
       </div>
     </div>
   );
-}I
+}
