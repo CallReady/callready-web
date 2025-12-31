@@ -13,11 +13,6 @@ export default function Home() {
               alt="CallReady logo"
               style={{ height: 40, width: "auto", display: "block" }}
             />
-            <div className="brandName">
-              CallReady
-              <div style={{ fontSize: 12, fontWeight: 500, opacity: 0.85, marginTop: 2 }}>
-                Helping teens build phone confidence
-              </div>
             </div>
           </div>
 
