@@ -123,17 +123,17 @@ export default function Home() {
 
           <div className="grid3">
             <div className="feature">
-              <div className="badge">C</div>
+              <div className="badge">I</div>
               <p className="tileTitle">Calm and respectful</p>
               <p className="tileText">Designed to reduce anxiety and support confidence through practice.</p>
             </div>
             <div className="feature">
-              <div className="badge">G</div>
+              <div className="badge">II</div>
               <p className="tileTitle">Guided, not pushy</p>
               <p className="tileText">Clear steps and gentle prompts. The teen sets the pace.</p>
             </div>
             <div className="feature">
-              <div className="badge">P</div>
+              <div className="badge">III</div>
               <p className="tileTitle">Practice first</p>
               <p className="tileText">The focus stays on preparation and repetition, not outcomes or pressure.</p>
             </div>
