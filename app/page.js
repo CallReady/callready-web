@@ -48,4 +48,32 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mini
+            <div className="miniNote">
+              Built for parents, teachers, and phone reluctant teens. Calm, guided, and respectful.
+            </div>
+          </div>
+
+          <div className="heroRight" aria-label="Highlights">
+            <div className="tile">
+              <p className="tileTitle">Practice, not performance</p>
+              <p className="tileText">A supportive space for repetition and preparation, at your own pace.</p>
+            </div>
+            <div className="tile">
+              <p className="tileTitle">Guided scenarios</p>
+              <p className="tileText">Practice common calls like appointments, questions, and follow-ups with gentle structure.</p>
+            </div>
+            <div className="tile">
+              <p className="tileTitle">Confidence grows</p>
+              <p className="tileText">Small wins add up. The goal is steady progress, not perfection.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="section" id="how">
+          <div className="sectionTitle">How it works</div>
+
+          <div className="grid3">
+            <div className="feature">
+              <div className="badge">1</div>
+              <p className="tileTitle">Call the number</p>
+              <p className="tileText">Tap to call on a phone. The call starts with a calm welcome and a simple choice.</
