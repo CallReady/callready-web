@@ -11,7 +11,7 @@ export default function Home() {
             <img
               src="/logo1.png"
               alt="CallReady logo"
-              style={{ height: 40, width: "auto", display: "block" }}
+              style={{ height: 150, width: "auto", display: "block" }}
             />
             </div>
           </div>
