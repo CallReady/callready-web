@@ -400,7 +400,7 @@ export default function Home() {
           border: 1px solid rgba(47, 58, 64, 0.18);
           text-decoration: none;
           color: var(--text);
-          background: #000;
+          background: #fff;
           font-weight: 700;
           font-size: 14px;
           cursor: pointer;
@@ -412,7 +412,7 @@ export default function Home() {
 
         .btnPrimary {
           background: var(--blue);
-          color: #fff;
+          color: #000;
           border-color: rgba(58, 111, 143, 0.35);
         }
 
