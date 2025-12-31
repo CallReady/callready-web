@@ -123,7 +123,7 @@ export default function Home() {
 
           <div className="grid3">
             <div className="feature">
-              <div className="badge">S</div>
+              <div className="badge">C</div>
               <p className="tileTitle">Calm and respectful</p>
               <p className="tileText">Designed to reduce anxiety and support confidence through practice.</p>
             </div>
