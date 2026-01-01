@@ -31,6 +31,7 @@ export default function Home() {
             <a href="#how">How it works</a>
             <a href="#why">Why CallReady</a>
             <a href="#safe">Safety</a>
+            <a href="#about">About</a>
             <a href="#sms">Text messaging</a>
             <a href="#contact">Contact</a>
           </div>
@@ -185,6 +186,52 @@ export default function Home() {
                 The focus stays on preparation and repetition, not outcomes or pressure.
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className="section" id="about">
+          <div className="sectionTitle">About CallReady</div>
+
+          <p className="sub" style={{ marginBottom: 12 }}>
+            CallReady is the brainchild of a high school English teacher in Oregon who noticed how
+            fearful some students have become about making phone calls.
+          </p>
+
+          <div className="grid2">
+            <div className="panel">
+              <div className="panelTitle">Why phone calls still matter</div>
+              <p className="tileText" style={{ marginBottom: 10 }}>
+                Even in a high-tech, internet-connected world, some things still get accomplished
+                faster, or only get accomplished at all, with a phone call.
+              </p>
+              <ul className="list">
+                <li>Calling a doctor’s office to schedule an appointment</li>
+                <li>Talking with a school office about attendance or records</li>
+                <li>Following up with a business about a return or missing order</li>
+                <li>Calling a landlord or property manager about a repair</li>
+                <li>Confirming an interview time when email is too slow</li>
+              </ul>
+            </div>
+
+            <div className="panel">
+              <div className="panelTitle">Practice with zero embarrassment</div>
+              <p className="tileText" style={{ marginBottom: 10 }}>
+                With new possibilities available through AI, we can now practice making phone calls
+                with zero risk of embarrassment or failure. You can repeat a scenario, pause when you
+                need, and build confidence through calm repetition.
+              </p>
+              <ul className="list">
+                <li>Low pressure practice, at your pace</li>
+                <li>No scoring, no judgment, no shame</li>
+                <li>Helpful prompts when you get stuck</li>
+                <li>Supportive feedback that focuses on progress</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="miniNote" style={{ marginTop: 12 }}>
+            CallReady is designed for teens, but it can also help adults preparing for interviews and
+            other important conversations.
           </div>
         </div>
 
@@ -665,7 +712,7 @@ export default function Home() {
 
         .btnPrimary {
           background: var(--blue);
-          color: #000;
+          color: #fff;
           border-color: rgba(58, 111, 143, 0.35);
         }
 
@@ -787,3 +834,4 @@ export default function Home() {
     </div>
   );
 }
+```0
