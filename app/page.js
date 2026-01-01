@@ -1,12 +1,22 @@
 "use client";
 
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
 const PHONE_E164 = "+18559761695";
 const PHONE_DISPLAY = "(855) 976-1695";
 const TEL_LINK = `tel:${PHONE_E164}`;
 
+const SUPPORT_EMAIL = "CallReady.Live@google.com";
+const MAILING_ADDRESS_LINES = ["1292 High St A3036", "Eugene, OR 97401"];
+
 export default function Home() {
   return (
-    <div>
+    <div className={inter.className}>
       <div className="container">
         <div className="nav">
           <div className="brand">
@@ -21,11 +31,17 @@ export default function Home() {
             <a href="#how">How it works</a>
             <a href="#why">Why CallReady</a>
             <a href="#safe">Safety</a>
+            <a href="#sms">Text messaging</a>
+            <a href="#contact">Contact</a>
           </div>
 
           <div className="navCta">
-            <a className="btn btnSecondary" href="#how">Learn how it works</a>
-            <a className="btn btnPrimary" href={TEL_LINK}>Call now</a>
+            <a className="btn btnSecondary" href="#how">
+              Learn how it works
+            </a>
+            <a className="btn btnPrimary" href={TEL_LINK}>
+              Call now
+            </a>
           </div>
         </div>
 
@@ -36,40 +52,54 @@ export default function Home() {
             <h1 className="h1">Helping teens build phone confidence</h1>
 
             <p className="sub">
-              CallReady gives teens a calm space to practice real phone calls with supportive guidance.
-              Practice is the point. Progress comes over time.
+              CallReady helps teens and adults build phone confidence through guided practice calls
+              and supportive feedback in a low-pressure environment. Practice is the point. Progress
+              comes over time.
             </p>
 
             <div className="phoneBlock" id="call">
               <div>
                 <div className="phoneLabel">Call this number to start a practice call</div>
-                <a className="phoneNumber" href={TEL_LINK}>{PHONE_DISPLAY}</a>
+                <a className="phoneNumber" href={TEL_LINK}>
+                  {PHONE_DISPLAY}
+                </a>
                 <div className="miniNote">No signup to try it. Hang up anytime.</div>
               </div>
 
               <div className="phoneActions">
-                <a className="btn btnPrimary" href={TEL_LINK}>Call now</a>
-                <a className="btn" href="#how">What happens on the call</a>
+                <a className="btn btnPrimary" href={TEL_LINK}>
+                  Call now
+                </a>
+                <a className="btn" href="#how">
+                  What happens on the call
+                </a>
               </div>
             </div>
 
             <div className="miniNote">
-              Built for parents, teachers, and phone reluctant teens. Calm, guided, and respectful.
+              Built for parents, teachers, and phone reluctant teens. Also helpful for adults
+              preparing for interviews and important calls.
             </div>
           </div>
 
           <div className="heroRight" aria-label="Highlights">
             <div className="tile">
               <p className="tileTitle">Practice, not performance</p>
-              <p className="tileText">A supportive space for repetition and preparation, at your own pace.</p>
+              <p className="tileText">
+                A supportive space for repetition and preparation, at your own pace.
+              </p>
             </div>
             <div className="tile">
               <p className="tileTitle">Guided scenarios</p>
-              <p className="tileText">Practice common calls like appointments, questions, and follow-ups with gentle structure.</p>
+              <p className="tileText">
+                Practice common calls like appointments, questions, and follow-ups with gentle structure.
+              </p>
             </div>
             <div className="tile">
               <p className="tileTitle">Confidence grows</p>
-              <p className="tileText">Small wins add up. The goal is steady progress, not perfection.</p>
+              <p className="tileText">
+                Small wins add up. The goal is steady progress, not perfection.
+              </p>
             </div>
           </div>
         </div>
@@ -81,17 +111,23 @@ export default function Home() {
             <div className="feature">
               <div className="badge">1</div>
               <p className="tileTitle">Call the number</p>
-              <p className="tileText">Tap to call on a phone. The call starts with a calm welcome and a simple choice.</p>
+              <p className="tileText">
+                Tap to call on a phone. The call starts with a calm welcome and a simple choice.
+              </p>
             </div>
             <div className="feature">
               <div className="badge">2</div>
               <p className="tileTitle">Choose a scenario</p>
-              <p className="tileText">Pick what you want to practice. You can also say, “You choose.”</p>
+              <p className="tileText">
+                Pick what you want to practice. You can also say, “You choose.”
+              </p>
             </div>
             <div className="feature">
               <div className="badge">3</div>
               <p className="tileTitle">Practice step by step</p>
-              <p className="tileText">Try the call, pause when you need, and repeat until it feels easier.</p>
+              <p className="tileText">
+                Try the call, pause when you need, and repeat until it feels easier.
+              </p>
             </div>
           </div>
         </div>
@@ -103,17 +139,23 @@ export default function Home() {
             <div className="feature">
               <div className="badge">A</div>
               <p className="tileTitle">It feels real</p>
-              <p className="tileText">Practicing on an actual phone call builds comfort faster than pretend practice.</p>
+              <p className="tileText">
+                Practicing on an actual phone call builds comfort faster than pretend practice.
+              </p>
             </div>
             <div className="feature">
               <div className="badge">B</div>
               <p className="tileTitle">It is consistent</p>
-              <p className="tileText">Same supportive structure each time, so teens know what to expect.</p>
+              <p className="tileText">
+                Same supportive structure each time, so callers know what to expect.
+              </p>
             </div>
             <div className="feature">
               <div className="badge">C</div>
               <p className="tileTitle">It is low pressure</p>
-              <p className="tileText">No judgment. No scoring. Just guided practice and encouragement.</p>
+              <p className="tileText">
+                No judgment. No scoring. Just guided practice and encouragement.
+              </p>
             </div>
           </div>
         </div>
@@ -125,30 +167,153 @@ export default function Home() {
             <div className="feature">
               <div className="badge">I</div>
               <p className="tileTitle">Calm and respectful</p>
-              <p className="tileText">Designed to reduce anxiety and support confidence through practice.</p>
+              <p className="tileText">
+                Designed to reduce anxiety and support confidence through practice.
+              </p>
             </div>
             <div className="feature">
               <div className="badge">II</div>
               <p className="tileTitle">Guided, not pushy</p>
-              <p className="tileText">Clear steps and gentle prompts. The teen sets the pace.</p>
+              <p className="tileText">
+                Clear steps and gentle prompts. The caller sets the pace.
+              </p>
             </div>
             <div className="feature">
               <div className="badge">III</div>
               <p className="tileTitle">Practice first</p>
-              <p className="tileText">The focus stays on preparation and repetition, not outcomes or pressure.</p>
+              <p className="tileText">
+                The focus stays on preparation and repetition, not outcomes or pressure.
+              </p>
             </div>
+          </div>
+        </div>
+
+        <div className="section" id="sms">
+          <div className="sectionTitle">Text messaging</div>
+
+          <p className="sub" style={{ marginBottom: 12 }}>
+            CallReady offers optional, low-frequency text messages to support practice. We use texting
+            to help you stay on track, not to market to you.
+          </p>
+
+          <div className="grid2">
+            <div className="panel">
+              <div className="panelTitle">What texts may include</div>
+              <ul className="list">
+                <li>Account setup confirmations</li>
+                <li>Practice reminders</li>
+                <li>Practice prompts</li>
+                <li>Links to start a practice call</li>
+                <li>Optional feedback summaries</li>
+                <li>Support messages if you request help</li>
+              </ul>
+            </div>
+
+            <div className="panel">
+              <div className="panelTitle">Frequency, STOP, and HELP</div>
+              <ul className="list">
+                <li>Message frequency: about 1 message per week</li>
+                <li>Message and data rates may apply</li>
+                <li>Reply STOP to unsubscribe</li>
+                <li>Reply HELP for help</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="panel" style={{ marginTop: 12 }}>
+            <div className="panelTitle">Consent and opt-in</div>
+            <p className="tileText" style={{ marginBottom: 10 }}>
+              If you choose to enable text messaging, you will be shown this consent statement:
+            </p>
+            <div className="quoteBox" aria-label="SMS consent text">
+              By continuing, you agree to receive occasional text messages from CallReady related to
+              your practice calls, reminders, and account support. Message frequency is about one per
+              week. Message and data rates may apply. Reply STOP at any time to unsubscribe.
+            </div>
+          </div>
+
+          <div className="panel" style={{ marginTop: 12 }}>
+            <div className="panelTitle">Sample messages</div>
+            <div className="samples">
+              <div className="sample">
+                Welcome to CallReady. You will receive occasional messages to support your practice calls and account activity.
+                Reply STOP to unsubscribe. Message and data rates may apply.
+              </div>
+              <div className="sample">
+                CallReady reminder: Your practice call is ready when you are. Start here: https://callready.live
+              </div>
+              <div className="sample">
+                CallReady feedback is ready. View your summary here: https://callready.live
+              </div>
+              <div className="sample">
+                CallReady help: This number sends practice reminders and account messages. For support, email {SUPPORT_EMAIL}.
+                Reply STOP to unsubscribe.
+              </div>
+              <div className="sample">
+                You have been unsubscribed from CallReady text messages. You will no longer receive messages.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="section" id="contact">
+          <div className="sectionTitle">Contact</div>
+
+          <div className="grid2">
+            <div className="panel">
+              <div className="panelTitle">Support</div>
+              <p className="tileText" style={{ marginBottom: 8 }}>
+                Email is the best way to reach us.
+              </p>
+              <div className="contactLine">
+                <span className="contactLabel">Email:</span>{" "}
+                <a className="contactLink" href={`mailto:${SUPPORT_EMAIL}`}>
+                  {SUPPORT_EMAIL}
+                </a>
+              </div>
+            </div>
+
+            <div className="panel">
+              <div className="panelTitle">Mailing address</div>
+              <div className="tileText">
+                {MAILING_ADDRESS_LINES.map((line) => (
+                  <div key={line}>{line}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="miniNote" style={{ marginTop: 12 }}>
+            Legal pages:{" "}
+            <a className="inlineLink" href="/privacy">
+              Privacy Policy
+            </a>
+            {" · "}
+            <a className="inlineLink" href="/terms">
+              Terms and Conditions
+            </a>
+            {" · "}
+            <a className="inlineLink" href="/sms">
+              SMS Messaging Policy
+            </a>
           </div>
         </div>
 
         <div className="footerCta">
           <div>
-            <div className="sectionTitle" style={{ margin: 0 }}>Ready to try a practice call?</div>
+            <div className="sectionTitle" style={{ margin: 0 }}>
+              Ready to try a practice call?
+            </div>
             <div className="small">Tap to call. No signup to try it. Hang up anytime.</div>
           </div>
 
           <div className="footerActions">
-            <a className="btn btnPrimary" href={TEL_LINK}>Call {PHONE_DISPLAY}</a>
-            <a className="btn" href="#how">See how it works</a>
+            <a className="btn btnPrimary" href={TEL_LINK}>
+              Call {PHONE_DISPLAY}
+            </a>
+            <a className="btn" href="#how">
+              See how it works
+            </a>
           </div>
         </div>
 
@@ -163,7 +328,9 @@ export default function Home() {
             <div className="stickyBrand">CallReady</div>
             <div className="small">Tap to call {PHONE_DISPLAY}</div>
           </div>
-          <a className="btn btnPrimary" href={TEL_LINK}>Call now</a>
+          <a className="btn btnPrimary" href={TEL_LINK}>
+            Call now
+          </a>
         </div>
       </div>
 
@@ -368,6 +535,12 @@ export default function Home() {
           gap: 12px;
         }
 
+        .grid2 {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+
         .feature {
           border: 1px solid var(--border);
           border-radius: 16px;
@@ -388,6 +561,86 @@ export default function Home() {
           font-weight: 900;
           margin-bottom: 10px;
           font-size: 13px;
+        }
+
+        .panel {
+          background: #fff;
+          border: 1px solid var(--border);
+          border-radius: 16px;
+          padding: 14px;
+        }
+
+        .panelTitle {
+          font-weight: 900;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+        .list {
+          margin: 0;
+          padding-left: 18px;
+          font-size: 14px;
+          line-height: 1.5;
+          opacity: 0.9;
+        }
+
+        .list li {
+          margin-bottom: 6px;
+        }
+
+        .quoteBox {
+          border: 1px solid rgba(58, 111, 143, 0.25);
+          background: rgba(58, 111, 143, 0.06);
+          border-radius: 14px;
+          padding: 12px;
+          font-size: 14px;
+          line-height: 1.5;
+          opacity: 0.95;
+        }
+
+        .samples {
+          display: grid;
+          gap: 10px;
+        }
+
+        .sample {
+          border: 1px solid var(--border);
+          background: rgba(155, 191, 166, 0.09);
+          border-radius: 14px;
+          padding: 12px;
+          font-size: 14px;
+          line-height: 1.5;
+          opacity: 0.95;
+        }
+
+        .contactLine {
+          font-size: 14px;
+          line-height: 1.5;
+          opacity: 0.92;
+        }
+
+        .contactLabel {
+          font-weight: 800;
+        }
+
+        .contactLink {
+          color: var(--blue);
+          text-decoration: none;
+          font-weight: 800;
+        }
+
+        .contactLink:hover {
+          text-decoration: underline;
+        }
+
+        .inlineLink {
+          color: var(--blue);
+          text-decoration: none;
+          font-weight: 800;
+        }
+
+        .inlineLink:hover {
+          text-decoration: underline;
         }
 
         .btn {
@@ -412,7 +665,7 @@ export default function Home() {
 
         .btnPrimary {
           background: var(--blue);
-          color: #000;
+          color: #fff;
           border-color: rgba(58, 111, 143, 0.35);
         }
 
@@ -509,6 +762,10 @@ export default function Home() {
 
         @media (max-width: 860px) {
           .grid3 {
+            grid-template-columns: 1fr;
+          }
+
+          .grid2 {
             grid-template-columns: 1fr;
           }
 
