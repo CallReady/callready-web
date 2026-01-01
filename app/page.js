@@ -665,7 +665,7 @@ export default function Home() {
 
         .btnPrimary {
           background: var(--blue);
-          color: #fff;
+          color: #000;
           border-color: rgba(58, 111, 143, 0.35);
         }
 
