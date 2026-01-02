@@ -63,13 +63,24 @@ export default function Home() {
               <h1 className="h1">Helping teens build phone confidence through guided practice calls</h1>
 
               <p className="sub">
-                CallReady is a calm, low pressure way to practice real phone calls with supportive
-                guidance. No signup to try it. Hang up anytime.
+                Phone calls are a different kind of communication. You cannot edit before you speak,
+                and silence can feel heavy. CallReady gives teens a calm place to practice until it
+                starts to feel normal.
               </p>
 
               <div className="heroMeta">
-                Built for parents, teachers, and phone reluctant teens. Also useful for adults
-                prepping for interviews and important calls.
+                Teacher perspective: I see capable students every year who can write, present, and
+                problem solve, but who freeze when they have to make a phone call. What most teens need
+                is practice, not pressure.
+              </div>
+
+              <div className="whyThisMatters">
+                <div className="whyTitle">Why a service like this matters</div>
+                <ul className="whyList">
+                  <li>Some tasks still require phone calls, or go faster with one</li>
+                  <li>Avoidance creates stress, missed opportunities, and dependence</li>
+                  <li>Repetition lowers anxiety, confidence grows over time</li>
+                </ul>
               </div>
 
               <div className="phoneBlock" id="call">
@@ -92,8 +103,8 @@ export default function Home() {
               </div>
 
               <div className="exampleCall">
-                Try a quick practice call like scheduling a doctor appointment, calling a school
-                office, or following up on a missing order.
+                Try a quick practice call: schedule an appointment, call a school office, confirm an interview,
+                or follow up on a missing order.
               </div>
             </div>
 
@@ -698,6 +709,33 @@ export default function Home() {
           opacity: 0.92;
         }
 
+        .whyThisMatters {
+          margin: 0 0 14px;
+          padding: 12px 12px;
+          border-radius: 14px;
+          border: 1px solid rgba(58, 111, 143, 0.18);
+          background: rgba(58, 111, 143, 0.08);
+        }
+
+        .whyTitle {
+          font-weight: 900;
+          font-size: 13px;
+          margin-bottom: 8px;
+          color: var(--text);
+        }
+
+        .whyList {
+          margin: 0;
+          padding-left: 18px;
+          font-size: 13px;
+          line-height: 1.45;
+          opacity: 0.92;
+        }
+
+        .whyList li {
+          margin-bottom: 6px;
+        }
+
         .phoneBlock {
           display: flex;
           gap: 14px;
@@ -1058,11 +1096,6 @@ export default function Home() {
           border-color: rgba(47, 58, 64, 0.28);
         }
 
-        /* CHANGE: make tel: buttons use black text for readability */
-        a.btn.btnPrimary[href^="tel:"] {
-          color: #000;
-        }
-
         .btnPrimary {
           background: var(--blue);
           border-color: rgba(58, 111, 143, 0.35);
@@ -1070,6 +1103,11 @@ export default function Home() {
 
         .btnPrimary:hover {
           filter: brightness(0.98);
+        }
+
+        /* Make tel: buttons use black text for readability */
+        a.btn.btnPrimary[href^="tel:"] {
+          color: #000;
         }
 
         .btnSecondary {
