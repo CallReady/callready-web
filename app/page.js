@@ -31,26 +31,28 @@ export default function Home() {
               />
             </div>
 
-            <div className="navLinks">
-              <a href="#how">How it works</a>
-              <a href="#hear">What you will hear</a>
-              <a href="#scenarios">Scenarios</a>
-              <a href="#why">Why CallReady</a>
-              <a href="#safe">Safety</a>
-              <a href="#parents">Parents and teachers</a>
-              <a href="#about">About</a>
-              <a href="#sms">Text messaging</a>
-              <a href="#faq">FAQ</a>
-              <a href="#contact">Contact</a>
-            </div>
+            <div className="navRight">
+              <div className="navLinks" aria-label="Page sections">
+                <a href="#how">How it works</a>
+                <a href="#hear">What you will hear</a>
+                <a href="#scenarios">Scenarios</a>
+                <a href="#why">Why</a>
+                <a href="#safe">Safety</a>
+                <a href="#parents">Parents and teachers</a>
+                <a href="#about">About</a>
+                <a href="#sms">Text messaging</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+              </div>
 
-            <div className="navCta">
-              <a className="btn btnSecondary" href="#how">
-                Learn how it works
-              </a>
-              <a className="btn btnPrimary" href={TEL_LINK}>
-                Call now
-              </a>
+              <div className="navCta">
+                <a className="btn btnSecondary" href="#how">
+                  Learn how it works
+                </a>
+                <a className="btn btnPrimary" href={TEL_LINK}>
+                  Call now
+                </a>
+              </div>
             </div>
           </div>
 
@@ -365,12 +367,12 @@ export default function Home() {
             <div className="panel panelTintBlue" style={{ marginBottom: 12 }}>
               <div className="panelTitle">Consent and opt-in</div>
               <p className="tileText" style={{ marginBottom: 10 }}>
-                If you choose to enable text messaging, you will be shown this consent statement:
+                If you choose to enable text messaging, you will be shown this opt in prompt:
               </p>
-              <div className="quoteBox" aria-label="SMS consent text">
-                By continuing, you agree to receive occasional text messages from CallReady related to
-                your practice calls, reminders, and account support. Message frequency is about one per
-                week. Message and data rates may apply. Reply STOP at any time to unsubscribe.
+              <div className="quoteBox" aria-label="SMS opt-in prompt">
+                You can choose to receive text messages from CallReady. If you opt in, we can text you short reminders about
+                what you practiced, what to work on next, and new features as we add them. To agree to receive text messages
+                from CallReady, press 1 now. If you do not want text messages, press 2 now.
               </div>
             </div>
 
@@ -378,11 +380,11 @@ export default function Home() {
               <div className="panel panelTintGreen">
                 <div className="panelTitle">What texts may include</div>
                 <ul className="list">
-                  <li>Account setup confirmations</li>
-                  <li>Practice reminders</li>
+                  <li>Short reminders about what you practiced</li>
+                  <li>Suggestions for what to work on next</li>
                   <li>Practice prompts</li>
                   <li>Links to start a practice call</li>
-                  <li>Optional feedback summaries</li>
+                  <li>New features as we add them</li>
                   <li>Support messages if you request help</li>
                 </ul>
               </div>
@@ -563,17 +565,12 @@ export default function Home() {
           --text: #2f3a40;
 
           --bg: #f6f8f9;
-          --card: #ffffff;
           --border: rgba(47, 58, 64, 0.12);
           --shadow: 0 12px 30px rgba(47, 58, 64, 0.12);
 
           --softBlue: rgba(58, 111, 143, 0.08);
           --softGreen: rgba(110, 143, 123, 0.10);
           --softAccent: rgba(155, 191, 166, 0.14);
-
-          --tileBlue: rgba(58, 111, 143, 0.10);
-          --tileGreen: rgba(110, 143, 123, 0.11);
-          --tileAccent: rgba(155, 191, 166, 0.16);
         }
 
         .pageBg {
@@ -593,18 +590,25 @@ export default function Home() {
         }
 
         .nav {
-          display: flex;
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 16px;
           align-items: center;
-          justify-content: space-between;
-          gap: 18px;
-          padding: 8px 0 18px;
+          padding: 10px 0 18px;
         }
 
         .brand {
           display: flex;
           align-items: center;
-          gap: 12px;
+          justify-content: flex-start;
           min-width: 210px;
+        }
+
+        .navRight {
+          display: grid;
+          gap: 10px;
+          align-items: center;
+          justify-items: end;
         }
 
         .navLinks {
@@ -612,12 +616,14 @@ export default function Home() {
           gap: 14px;
           flex-wrap: wrap;
           align-items: center;
-          justify-content: center;
-          padding: 8px 10px;
+          justify-content: flex-end;
+          padding: 10px 12px;
           border: 1px solid var(--border);
           border-radius: 16px;
-          background: rgba(255, 255, 255, 0.7);
+          background: rgba(255, 255, 255, 0.70);
           backdrop-filter: blur(6px);
+          width: 100%;
+          box-sizing: border-box;
         }
 
         .navLinks a {
@@ -626,6 +632,7 @@ export default function Home() {
           font-size: 13px;
           opacity: 0.9;
           font-weight: 600;
+          white-space: nowrap;
         }
 
         .navLinks a:hover {
@@ -638,7 +645,7 @@ export default function Home() {
           gap: 10px;
           flex-wrap: wrap;
           justify-content: flex-end;
-          min-width: 320px;
+          width: 100%;
         }
 
         .hero {
@@ -1135,20 +1142,22 @@ export default function Home() {
 
         @media (max-width: 1040px) {
           .nav {
-            flex-direction: column;
-            align-items: stretch;
+            grid-template-columns: 1fr;
           }
 
           .brand {
             justify-content: center;
           }
 
-          .navCta {
-            justify-content: center;
-            min-width: 0;
+          .navRight {
+            justify-items: center;
           }
 
           .navLinks {
+            justify-content: center;
+          }
+
+          .navCta {
             justify-content: center;
           }
         }
