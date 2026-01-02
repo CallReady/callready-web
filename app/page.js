@@ -49,7 +49,7 @@ export default function Home() {
                 <a className="btn btnSecondary" href="#how">
                   Learn how it works
                 </a>
-                <a className="btn btnPrimary" href={TEL_LINK}>
+                <a className="btn btnPrimary" href={TEL_LINK} aria-label="Call now">
                   Call now
                 </a>
               </div>
@@ -82,7 +82,7 @@ export default function Home() {
                 </div>
 
                 <div className="phoneActions">
-                  <a className="btn btnPrimary" href={TEL_LINK}>
+                  <a className="btn btnPrimary" href={TEL_LINK} aria-label="Call now">
                     Call now
                   </a>
                   <a className="btn" href="#how">
@@ -530,7 +530,7 @@ export default function Home() {
             </div>
 
             <div className="footerActions">
-              <a className="btn btnPrimary" href={TEL_LINK}>
+              <a className="btn btnPrimary" href={TEL_LINK} aria-label="Call CallReady">
                 Call {PHONE_DISPLAY}
               </a>
               <a className="btn" href="#how">
@@ -551,7 +551,7 @@ export default function Home() {
             <div className="stickyBrand">CallReady</div>
             <div className="small">Tap to call {PHONE_DISPLAY}</div>
           </div>
-          <a className="btn btnPrimary" href={TEL_LINK}>
+          <a className="btn btnPrimary" href={TEL_LINK} aria-label="Call now">
             Call now
           </a>
         </div>
@@ -567,10 +567,6 @@ export default function Home() {
           --bg: #f6f8f9;
           --border: rgba(47, 58, 64, 0.12);
           --shadow: 0 12px 30px rgba(47, 58, 64, 0.12);
-
-          --softBlue: rgba(58, 111, 143, 0.08);
-          --softGreen: rgba(110, 143, 123, 0.10);
-          --softAccent: rgba(155, 191, 166, 0.14);
         }
 
         .pageBg {
@@ -1062,9 +1058,13 @@ export default function Home() {
           border-color: rgba(47, 58, 64, 0.28);
         }
 
+        /* CHANGE: make tel: buttons use black text for readability */
+        a.btn.btnPrimary[href^="tel:"] {
+          color: #000;
+        }
+
         .btnPrimary {
           background: var(--blue);
-          color: #fff;
           border-color: rgba(58, 111, 143, 0.35);
         }
 
