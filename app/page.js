@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 import { builder } from "@builder.io/sdk";
-import BuilderContentClient from "./BuilderContentClient";
+import BuilderContentClient from "./BuilderContentClient.jsx";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
