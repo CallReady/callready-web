@@ -2,9 +2,16 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 import { builder } from "@builder.io/sdk";
-import BuilderContentClient from "./BuilderContentClient.jsx";
+import BuilderContentClient from "../BuilderContentClient.jsx";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
+
+function pathFromParams(params) {
+  const parts = params && params.slug ? params.slug : [];
+  if (!Array.isArray(parts) || parts.length === 0) return "/";
+  return "/" + parts.join("/");
+}
+
 function getSeoValue(data, keys) {
   if (!data) return "";
   for (const k of keys) {
@@ -13,9 +20,11 @@ function getSeoValue(data, keys) {
   return "";
 }
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }) {
+  const urlPath = pathFromParams(params);
+
   const content = await builder
-    .get("page", { url: "/" }, { cachebust: true })
+    .get("page", { url: urlPath }, { cachebust: true })
     .toPromise();
 
   const data = content && content.data ? content.data : {};
@@ -31,14 +40,16 @@ export async function generateMetadata() {
   return { title, description };
 }
 
-export default async function Page() {
-const content = await builder
-.get("page", { url: "/" }, { cachebust: true })
-.toPromise();
+export default async function Page({ params }) {
+  const urlPath = pathFromParams(params);
 
-if (!content) {
-return <div>No Builder content found</div>;
-}
+  const content = await builder
+    .get("page", { url: urlPath }, { cachebust: true })
+    .toPromise();
 
-return <BuilderContentClient content={content} />;
+  if (!content) {
+    return <div>Page not found</div>;
+  }
+
+  return <BuilderContentClient content={content} />;
 }
