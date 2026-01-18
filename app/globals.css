@@ -26,7 +26,7 @@ a{ color: inherit; text-decoration: none; }
 a{
 color: #4A86A8;
 text-decoration: underline;
-text-decoration-thickness: 1.5px;
+text-decoration-thickness: .5px;
 text-underline-offset: 3px;
 }
 
