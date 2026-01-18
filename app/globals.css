@@ -23,6 +23,8 @@ margin: 0;
 
 a{ color: inherit; text-decoration: none; }
 
+a:hover { text-decoration: underline; }
+
 .container{
   width: min(1040px, calc(100% - 40px));
   margin: 0 auto;
