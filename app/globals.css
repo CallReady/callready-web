@@ -103,6 +103,18 @@ text-decoration: underline;
 text-decoration: none;
 }
 
+a.btn,
+a.btn:link,
+a.btn:visited,
+a.btn:hover,
+a.btn:active {
+text-decoration: none;
+}
+
+a.btn * {
+text-decoration: none;
+}
+
 .btnPrimary{
   background: var(--primary);
   color: #fff;
