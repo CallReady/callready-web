@@ -251,13 +251,15 @@ a:hover{
 
 /* Builder buttons: do not restyle, only remove underline and add hover enlarge */
 a.builder-block[href="/practice"],
-a.builder-block[href="/help"]{
+a.builder-block[href="/help"],
+a.builder-block[href^="tel:"]{
   text-decoration: none !important;
   transition: transform 0.15s ease !important;
 }
 
 a.builder-block[href="/practice"]:hover,
-a.builder-block[href="/help"]:hover{
+a.builder-block[href="/help"]:hover,
+a.builder-block[href^="tel:"]:hover{
   text-decoration: none !important;
   transform: scale(1.04) !important;
 }
