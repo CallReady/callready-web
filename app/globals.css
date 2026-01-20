@@ -252,3 +252,38 @@ a:hover{
   .navLinks{ display:none; }
   .stickyCall{ display:block; }
 }
+
+a.builder-block[href="/practice"],
+a.builder-block[href="/help"]{
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 14px 16px;
+border-radius: 14px;
+border: 1px solid var(--border);
+text-decoration: none !important;
+cursor: pointer;
+font-weight: 600;
+font-size: 14px;
+transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.builder-block[href="/practice"]{
+background: var(--primary);
+color: #fff;
+border-color: rgba(0,0,0,0);
+box-shadow: 0 10px 24px rgba(58,111,143,0.22);
+}
+
+a.builder-block[href="/help"]{
+background: rgba(110,143,123,0.14);
+border-color: rgba(110,143,123,0.30);
+color: var(--text);
+}
+
+a.builder-block[href="/practice"]:hover,
+a.builder-block[href="/help"]:hover{
+text-decoration: none !important;
+transform: scale(1.04) !important;
+box-shadow: 0 12px 28px rgba(47,58,64,0.16);
+}
