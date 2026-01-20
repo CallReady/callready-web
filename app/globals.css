@@ -313,3 +313,12 @@ text-decoration: none;
   .navLinks{ display:none; }
   .stickyCall{ display:block; }
 }
+
+a.btn {
+  text-decoration: none;
+}
+
+a.btn * {
+  text-decoration: none;
+}
+
