@@ -11,27 +11,27 @@
 
 *{ box-sizing:border-box; }
 html, body{ padding:0; margin:0; }
+
 body{
   background: var(--bg);
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-h1, h2, h3 {
-margin: 0;
+h1, h2, h3{
+  margin: 0;
 }
 
-a{ color: inherit; text-decoration: none; }
-
+/* Global link styling */
 a{
-color: #4A86A8;
-text-decoration: underline;
-text-decoration-thickness: .5px;
-text-underline-offset: 3px;
+  color: #4A86A8;
+  text-decoration: none;
 }
 
 a:hover{
-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 3px;
 }
 
 .container{
@@ -93,26 +93,22 @@ text-decoration: underline;
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
+  text-decoration: none;
 }
 
-.btn,
-.btn:link,
-.btn:visited,
-.btn:hover,
-.btn:active {
-text-decoration: none;
+/* Ensure buttons never show underlines */
+.btn a,
+.btn a:link,
+.btn a:visited,
+.btn a:hover,
+.btn a:active{
+  text-decoration: none;
+  text-decoration-line: none;
 }
 
-a.btn,
-a.btn:link,
-a.btn:visited,
-a.btn:hover,
-a.btn:active {
-text-decoration: none;
-}
-
-a.btn * {
-text-decoration: none;
+.btn a *{
+  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .btnPrimary{
@@ -313,12 +309,3 @@ text-decoration: none;
   .navLinks{ display:none; }
   .stickyCall{ display:block; }
 }
-
-a.btn {
-  text-decoration: none;
-}
-
-a.btn * {
-  text-decoration: none;
-}
-
