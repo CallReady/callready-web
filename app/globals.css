@@ -200,6 +200,15 @@ a:hover{
   box-shadow: 0 8px 22px rgba(47,58,64,0.08);
 }
 
+#cr-version{
+  font-size: 12px;
+  color: rgba(47,58,64,0.6);
+  text-align: center;
+  margin: 24px 0 16px 0;
+  line-height: 1.4;
+}
+
+
 /* Footer CTA */
 .footerCta{
   margin: 18px 0 40px 0;
