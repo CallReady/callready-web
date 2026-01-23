@@ -130,3 +130,37 @@
 
   mo.observe(document.documentElement, { childList: true, subtree: true });
 })();
+
+<script>
+  (function () {
+    var buildVersion = "v1.12.5";
+
+    var formatter = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Los_Angeles",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false
+    });
+
+    function updateVersion() {
+      var el = document.getElementById("cr-version");
+      if (!el) return;
+
+      var now = new Date();
+      var formatted = formatter.format(now);
+      el.textContent = "Build " + buildVersion + " · Updated " + formatted + " PT";
+    }
+
+    updateVersion();
+
+    var mo = new MutationObserver(function () {
+      updateVersion();
+    });
+
+    mo.observe(document.documentElement, { childList: true, subtree: true });
+  })();
+</script>
