@@ -1,11 +1,12 @@
 (function () {
   function initHeader(navwrap) {
     if (!navwrap || navwrap.__crInitDone) return;
-    navwrap.__crInitDone = true;
 
     var toggle = navwrap.querySelector(".cr-toggle");
     var topbar = navwrap.querySelector(".cr-topbar");
     if (!toggle || !topbar) return;
+
+    navwrap.__crInitDone = true;
 
     function setTopbarHeightVar() {
       var h = Math.round(topbar.getBoundingClientRect().height || 0);
@@ -17,11 +18,15 @@
 
     var linksWrap = navwrap.querySelector(".cr-links");
     if (linksWrap) {
-      linksWrap.addEventListener("click", function (e) {
-        var a = e.target && e.target.closest ? e.target.closest("a") : null;
-        if (!a) return;
-        toggle.checked = false;
-      }, true);
+      linksWrap.addEventListener(
+        "click",
+        function (e) {
+          var a = e.target && e.target.closest ? e.target.closest("a") : null;
+          if (!a) return;
+          toggle.checked = false;
+        },
+        true
+      );
     }
 
     var lastY = window.pageYOffset || 0;
@@ -118,21 +123,7 @@
     }
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", scanAndInit);
-  } else {
-    scanAndInit();
-  }
-
-  var mo = new MutationObserver(function () {
-    scanAndInit();
-  });
-
-  mo.observe(document.documentElement, { childList: true, subtree: true });
-})();
-
-<script>
-  (function () {
+  function initVersionStamp() {
     var buildVersion = "v1.12.5";
 
     var formatter = new Intl.DateTimeFormat("en-US", {
@@ -157,10 +148,26 @@
 
     updateVersion();
 
-    var mo = new MutationObserver(function () {
+    var mo2 = new MutationObserver(function () {
       updateVersion();
     });
 
-    mo.observe(document.documentElement, { childList: true, subtree: true });
-  })();
-</script>
+    mo2.observe(document.documentElement, { childList: true, subtree: true });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      scanAndInit();
+      initVersionStamp();
+    });
+  } else {
+    scanAndInit();
+    initVersionStamp();
+  }
+
+  var mo = new MutationObserver(function () {
+    scanAndInit();
+  });
+
+  mo.observe(document.documentElement, { childList: true, subtree: true });
+})();
