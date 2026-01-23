@@ -203,9 +203,9 @@ a:hover{
 #cr-version{
   font-size: 12px;
   color: rgba(47,58,64,0.6);
-  text-align: center;
-  margin: 24px 0 16px 0;
-  line-height: 1.4;
+  text-align: left;
+  margin: 1px 0 1px 0;
+  line-height: 1.2;
 }
 
 
