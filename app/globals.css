@@ -39,14 +39,14 @@ h1, h2, h3{
 
 /* Global link styling */
 a{
-  color: #4A86A8;
+  color: var(--primary);
   text-decoration: none;
 }
 
 a:hover{
   text-decoration: underline;
   text-decoration-thickness: 0.5px;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
 }
 
 /* Layout */
@@ -348,5 +348,14 @@ a.builder-block[href^="tel:"]:hover{
 /* Utility to remove shadows when legacy styles are too heavy */
 .no-shadow {
   box-shadow: none !important;
+}
+/* Calm focus states */
+:focus-visible {
+  outline: 2px solid rgba(58,111,143,0.35);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
