@@ -3,6 +3,7 @@
   --bg: #EEF4F7;
   --text: #2F3A40;
   --primary: #3A6F8F;
+  --bg-primary: #F6F8F9;
   --secondary: #6E8F7B;
   --accent: #9BBFA6;
   --card: #ffffff;
@@ -337,3 +338,15 @@ a.builder-block[href^="tel:"]:hover{
   padding-left: var(--space-3);
   padding-right: var(--space-3);
 }
+/* Alternate section background */
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+.bg-tint {
+  background-color: var(--bg);
+}
+/* Utility to remove shadows when legacy styles are too heavy */
+.no-shadow {
+  box-shadow: none !important;
+}
+
