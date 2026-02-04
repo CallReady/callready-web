@@ -329,3 +329,11 @@ a.builder-block[href^="tel:"]:hover{
   border-color: rgba(47,58,64,0.18);
   outline: none;
 }
+/* Calm reading width for text sections */
+.section-content {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+}
