@@ -116,6 +116,7 @@ a:hover{
 .btn:hover{
   transform: none;
   box-shadow: 0 8px 22px rgba(47,58,64,0.10);
+  filter: brightness(0.98);
 }
 
 /* Prevent underlines in buttons in all states */
