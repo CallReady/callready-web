@@ -119,6 +119,10 @@ a:hover{
   filter: brightness(0.98);
 }
 
+.btn:not(.btnPrimary):hover{
+  border-color: rgba(47,58,64,0.18);
+}
+
 /* Prevent underlines in buttons in all states */
 .btn,
 .btn:link,
