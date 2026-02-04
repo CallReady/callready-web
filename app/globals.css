@@ -286,3 +286,15 @@ a.builder-block[href^="tel:"]:hover{
   text-decoration: none !important;
   transform: scale(1.04) !important;
 }
+/* Standard section spacing override */
+.section {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-7);
+}
+
+@media (max-width: 880px) {
+  .section {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+  }
+}
