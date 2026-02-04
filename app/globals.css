@@ -303,3 +303,9 @@ a.builder-block[href^="tel:"]:hover{
     padding-bottom: var(--space-6);
   }
 }
+/* Soft container for calm sections */
+.soft-container {
+  background-color: var(--bg);
+  border-radius: var(--radius-container);
+  padding: var(--space-4);
+}
