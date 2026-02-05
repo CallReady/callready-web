@@ -45,7 +45,6 @@ h1, h2, h3{
 
 /* Global link styling */
 a{
-  color: var(--primary);
   text-decoration: none;
 }
 
