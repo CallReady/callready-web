@@ -386,3 +386,13 @@ a.text-link {
 a.text-link:hover {
   transform: translateY(-1px) scale(1.02);
 }
+
+a.builder-block[href^="tel:"]:hover:not(.text-link) {
+  transform: none !important;
+}
+
+a.text-link:hover,
+a.builder-block.text-link:hover {
+  transform: translateY(-1px) scale(1.02) !important;
+  color: var(--primary);
+}
