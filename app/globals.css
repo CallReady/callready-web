@@ -154,7 +154,7 @@ a:hover{
 
 /* LEGACY: prefer .call-button or calm defaults for new UI */
 .btnSecondary{
-  background: rgba(110,143,123,0.14);
+  background: transparent;
   border-color: rgba(110,143,123,0.30);
   color: var(--text);
 }
@@ -337,7 +337,7 @@ a.builder-block[href^="tel:"]:hover{
 }
 .call-button:hover,
 .call-button:focus {
-  background-color: rgba(47,58,64,0.04);
+  background-color: transparent;
   border-color: rgba(47,58,64,0.18);
   outline: none;
 }
