@@ -380,11 +380,13 @@ a.builder-block.btnSecondary[href^="tel:"]:hover{
 }
 a.text-link {
   display: inline-block;
+  text-decoration: none;
   transition: transform 0.15s ease, color 0.15s ease;
 }
 
 a.text-link:hover {
-  transform: translateY(-1px) scale(1.02);
+  transform: scale(1.03);
+  color: var(--primary);
 }
 
 a.builder-block[href^="tel:"]:hover:not(.text-link) {
