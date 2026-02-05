@@ -299,10 +299,19 @@ a.builder-block[href^="tel:"]{
 
 a.builder-block[href="/practice"]:hover,
 a.builder-block[href="/help"]:hover,
-a.builder-block[href^="tel:"]:hover{
+a.builder-block.btn[href^="tel:"],
+a.builder-block.btnPrimary[href^="tel:"],
+a.builder-block.btnSecondary[href^="tel:"]{
   text-decoration: none !important;
-    transform: none !important;
+  transition: transform 0.15s ease !important;
 }
+
+a.builder-block.btn[href^="tel:"]:hover,
+a.builder-block.btnPrimary[href^="tel:"]:hover,
+a.builder-block.btnSecondary[href^="tel:"]:hover{
+  transform: none !important;
+}
+
 /* Standard section spacing override */
 .section {
   padding-top: var(--space-7);
