@@ -369,4 +369,11 @@ a.builder-block[href^="tel:"]:hover{
 :focus:not(:focus-visible) {
   outline: none;
 }
+a.text-link {
+  display: inline-block;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
 
+a.text-link:hover {
+  transform: translateY(-1px) scale(1.02);
+}
