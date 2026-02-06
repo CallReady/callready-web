@@ -381,12 +381,12 @@ a.builder-block.btnSecondary[href^="tel:"]:hover{
 a.text-link {
   display: inline-block;
   text-decoration: none;
-  transition: transform 0.15s ease, color 0.15s ease;
+  transition: text-shadow 0.15s ease, color 0.15s ease;
 }
 
 a.text-link:hover {
-  transform: scale(1.03);
   color: var(--primary);
+  text-shadow: 0 1px 2px rgba(47,58,64,0.25);
 }
 
 a.builder-block[href^="tel:"]:hover:not(.text-link) {
