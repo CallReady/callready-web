@@ -396,7 +396,7 @@ a.builder-block[href^="tel:"]:hover:not(.text-link) {
 a.text-link,
 a.builder-block.text-link {
   transform: none !important;
-  text-decoration: none;
+  text-decoration: underline;
   transition: text-shadow 0.30s ease, color 0.30s ease;
 }
 
