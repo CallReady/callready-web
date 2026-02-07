@@ -404,5 +404,5 @@ a.text-link:hover,
 a.builder-block.text-link:hover {
   transform: none !important;
   color: var(--primary);
-  text-shadow: 0 0px 4px rgba(255, 255, 255, 0.35);
+  text-shadow: 0 0px 6px rgba(255, 255, 255, 0.4);
 }
